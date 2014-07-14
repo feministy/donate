@@ -1,0 +1,25 @@
+#menu {
+  height: 1.25em;
+  padding: 10px;
+}
+
+#header {
+  @extend %background-color-red;
+  padding: 20px 0px;
+  margin-bottom: 50px;
+}
+
+@each $size, $pixels in $breakpoints {
+  @media (max-width: $pixels) {
+    #logo {
+      width: $pixels * 0.05;
+      margin: 0 auto;
+    }
+  }
+}
+
+#container {
+  max-width: map-get($breakpoints, default);
+  padding: 10px;
+  margin: 0 auto;
+}

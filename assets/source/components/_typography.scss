@@ -1,0 +1,38 @@
+body {
+  font-size: $fontSize;
+  @extend %color-gray_darkest;
+}
+
+p {
+  line-height: $fontSize * 1.5;
+}
+
+a {
+  text-decoration: none;
+  @extend %color-gray_medium;
+}
+
+@mixin headers {
+  font-family: $fontAccent;
+  font-weight: $fontWeightLight;
+  @extend %color-gray_darkest;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include headers;
+  margin: 0;
+  padding: 0;
+}
+
+h1.title {
+  @extend %color-red;
+  font-size: $fontSize * 4;
+  text-align: center;
+}
+
+.leader {
+  margin: 0 auto;
+  text-align: center;
+  font-size: $fontSize * 1.25;
+  @include headers;
+}

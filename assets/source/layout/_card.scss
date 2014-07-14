@@ -1,0 +1,6 @@
+.card {
+  padding: 10px;
+  margin: 20px auto;
+  width: 50%;
+  @extend %background-color-gray_lightest;
+}
